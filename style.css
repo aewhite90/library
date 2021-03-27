@@ -1,0 +1,216 @@
+:root {
+  --dark-blue: #506C8B;
+  --light-blue: #6f94bf;
+  --white: #EDE5DE;
+  --white-pop: #000;
+  --green: #158b6c;
+  --red: #6c1525;
+  --midnight: #001231;
+}
+
+body {
+  font-family: helvetica, sans-serif;
+  background-color: var(--white);
+  display: flex;
+}
+
+h1 {
+  padding-left: 5%;
+}
+
+/* Header Layout */
+#header {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 10px 10px 10px var(--midnight);
+}
+
+/* Button to Open New Book Form */
+.btn {
+  color: var(--white);
+  border: 2px solid var(--white);
+  background-color: var(--dark-blue);
+  border-radius: 1em;
+  font-weight: bold;
+  float: right;
+  height: 25px;
+  margin: 25px 3em 0 auto;
+}
+
+.btn:hover {
+  color: var(--dark-blue);
+  background-color: var(--white);
+  cursor: pointer;
+}
+
+.btn-active {
+  background-color: var(--white-pop);
+  border: 2px solid var(--white-pop);
+}
+
+/* New Book Form */
+.form-container {
+  font-size: 18px;
+  position: fixed;
+  background-color: var(--white);
+  border: 1px solid black;
+  width: 400px;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 10px;
+  z-index: 1;
+}
+
+.form-container label {
+  margin-bottom: 10px;
+}
+
+.form-container input[type=text], .form-container input[type=number] {
+  width: 87%;
+  padding: 15px;
+  margin: 10px 0 15px 0;
+}
+
+input[type=checkbox] {
+  vertical-align: middle;
+}
+
+.btn-add {
+  color: var(--green);
+  border: 2px solid var(--green);
+  background-color: var(--white);
+  border-radius: 1em;
+  font-weight: bold;
+  float: right;
+  height: 25px;
+  width: 75px;
+  margin: 25px 3em 0 auto;
+}
+
+.btn-add:hover {
+  color: var(--white);
+  background-color: var(--green);
+  cursor: pointer;
+}
+
+.btn-cancel {
+  color: var(--red);
+  border: 2px solid var(--red);
+  background-color: var(--white);
+  border-radius: 1em;
+  font-weight: bold;
+  float: right;
+  height: 25px;
+  width: 75px;
+  margin: 25px 3em 0 auto;
+}
+
+.btn-cancel:hover {
+  color: var(--white);
+  background-color: var(--red);
+  cursor: pointer;
+}
+
+#newBookForm {
+  display: none;
+  color: black;
+}
+
+/* Library Cards */
+#card-catalog {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  top: 100px;
+  left: 25px;
+}
+
+.card {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  line-height: 5px;
+  justify-content: flex-start;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  box-shadow: 10px 10px 10px var(--midnight);
+  margin: 20px 20px 20px 20px;
+  min-width: 225px;
+}
+
+.card-green-btn {
+  color: var(--white);
+  border: 2px solid var(--white);
+  background-color: var(--green);
+  border-radius: 1em;
+  font-weight: bold;
+  height: 25px;
+  margin: 2px auto 0 0;
+}
+
+.card-green-btn:hover {
+  color: var(--green);
+  background-color: var(--white);
+  cursor: pointer;
+}
+
+.card-red-btn {
+  color: var(--white);
+  border: 2px solid var(--white);
+  background-color: var(--red);
+  border-radius: 1em;
+  font-weight: bold;
+  height: 25px;
+  margin: 2px auto 0 0;
+}
+
+.card-red-btn:hover {
+  color: var(--red);
+  background-color: var(--white);
+  cursor: pointer;
+}
+
+.card-remove-btn {
+  color: var(--white);
+  border: 2px solid var(--white);
+  background-color: var(--dark-blue);
+  border-radius: 1em;
+  font-weight: bold;
+  height: 25px;
+  margin: 2px auto 0 0;
+}
+
+.card-remove-btn:hover {
+  color: var(--dark-blue);
+  background-color: var(--white);
+  cursor: pointer;
+}
+
+/*Sign In*/
+.btn-sign-in {
+  color: var(--dark-blue);
+  border: 2px solid var(--dark-blue);
+  background-color: var(--white);
+  border-radius: 1em;
+  font-weight: bold;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 25px;
+  margin-right: 25px;
+  height: 25px;
+  width: 75px;
+  z-index: 1;
+}
+
+.btn-sign-in:hover {
+  color: var(--white);
+  background-color: var(--dark-blue);
+  cursor: pointer;
+}
