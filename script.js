@@ -29,11 +29,25 @@ console.log('closeForm() before => ', myLibrary);
 }
 
 // Constructor //
-function Book(title, author, pages, finished) {
-  this.title = title
-  this.author = author
-  this.pages = pages
-  this.finished = finished
+// function Book(title, author, pages, finished) {
+//   this.title = title
+//   this.author = author
+//   this.pages = pages
+//   this.finished = finished
+// }
+
+class Book {
+  constructor(
+    title = "Unknown",
+    author = "Unknown",
+    pages = 0,
+    isRead = false
+  ) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.isRead = isRead;
+  }
 }
 
 
@@ -134,7 +148,13 @@ function addBookToLibrary() {
     storeLocal();
     return;
   } else {
-    mylibrary = myLibrary.push(new Book(bookTitle, bookAuthor, bookPages, bookFinished));
+    let aNewBook = new Book(
+      this.title = bookTitle,
+      this.author = bookAuthor,
+      this.pages = bookPages,
+      this.finished = bookFinished
+    )
+    mylibrary = myLibrary.push(aNewBook);
     storeLocal();
     closeForm();
     updateLibrary();
